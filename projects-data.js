@@ -74,7 +74,9 @@ const GRAPHIC_CATEGORIES = [
     items: [
       { title: "Fan project", image: "assets/tenyears.png" },
       { title: "Fan project", image: "assets/stayc.png" },
-      { title: "Fan project", image: "assets/sunric.png" }
+      { title: "Fan project", image: "assets/sunric.png" },
+      { title: "Fan project", image: "assets/taerae.png" },
+      { title: "Fan project", image: "assets/beatbox.png" }
     ]
   },
     {
