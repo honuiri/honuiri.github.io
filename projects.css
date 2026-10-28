@@ -122,7 +122,19 @@
   overflow: hidden;
   transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
 }
-.card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+a.card-img { color: inherit; text-decoration: none; }
+.card-img { position: relative; }
+.card-img img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: top;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.card-img img.loaded { opacity: 1; }
+.card-img.fallback { background: var(--cream); border-color: var(--blue); }
+.card-img.fallback img { object-fit: contain; object-position: center; }
 .card:hover .card-img {
   transform: translate(-5px, -5px);
   box-shadow: 8px 8px 0 var(--yellow);

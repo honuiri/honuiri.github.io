@@ -1,22 +1,26 @@
 /* ==========================================================
    YOUR PROJECTS LIVE HERE.
-   To add a project, copy one { ... }, line block, paste it
+   To add a project, copy one { ... }, block, paste it
    below the last one, and edit it. No other file needs to change.
-   Put images in the assets folder, e.g. "assets/uiux/my-app.png".
-   Leave image: "" to show a gray placeholder.
    ========================================================== */
 
-/* ---------- UI/UX & DEVELOPMENT (4 per row on desktop) ---------- */
+/* ---------- UI/UX & DEVELOPMENT (4 per row on desktop) ----------
+   The picture on each card is AUTOMATIC. You do not need images.
+     1. If you set image: "assets/..." that picture is used.
+     2. Otherwise, a screenshot of your live site is shown.
+     3. If there is no live site, the GitHub repo's preview card is shown.
+   Clicking the picture opens the live site (or GitHub if there is no live link).
+   Leave github or live as "" to hide that button. */
 const UIUX_PROJECTS = [
   {
     title: "D' Noms of Decilio (DND)",
     role: "UI/UX Designer & Developer",
-    image: "",                                   // e.g. "assets/uiux/project-1.png"
+    image: "",                                   // optional: your own picture, e.g. "assets/uiux/dnd.png"
     tags: ["HTML", "CSS", "React"],              // optional small labels
-    github: "https://github.com/honuiri/D-Noms-of-Decilio",        // leave "" to hide the button
-    live: "https://d-noms-of-decilio.onrender.com/"                                    
+    github: "https://github.com/honuiri/D-Noms-of-Decilio",
+    live: "https://d-noms-of-decilio.onrender.com/"
   },
-    {
+  {
     title: "AniMedika",
     role: "UI/UX Designer & Front-end Developer",
     image: "",
@@ -28,7 +32,7 @@ const UIUX_PROJECTS = [
     title: "eLinkgod",
     role: "UI/UX Designer & Front-end Developer",
     image: "",
-    tags: ["Figma", "Prototype"],
+    tags: ["Dart", "C++", "HTML"],
     github: "https://github.com/cinemaseven/eLingkod",
     live: ""
   },
@@ -55,7 +59,7 @@ const UIUX_PROJECTS = [
    Add as many items as you want, the carousel scrolls.
    To add a category, copy a whole { id, label, items } block. */
 const GRAPHIC_CATEGORIES = [
-    {
+  {
     id: "branding",
     label: "Branding & Identity",
     items: [
@@ -64,7 +68,7 @@ const GRAPHIC_CATEGORIES = [
       { title: "Branding title", image: "" }
     ]
   },
-    {
+  {
     id: "academic",
     label: "Academic Projects",
     items: [
@@ -87,11 +91,11 @@ const GRAPHIC_CATEGORIES = [
       { title: "Fan project", image: "assets/beatbox.png" }
     ]
   },
-    {
+  {
     id: "posters",
     label: "Posters",
     items: [
-      { title: "Poster title", image: "assets/ramen.png" },      
+      { title: "Poster title", image: "assets/ramen.png" },
       { title: "Poster title", image: "assets/yesterday.png" },
       { title: "Poster title", image: "" }
     ]
