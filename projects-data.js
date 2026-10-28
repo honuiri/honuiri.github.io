@@ -51,8 +51,8 @@ const GRAPHIC_CATEGORIES = [
     id: "posters",
     label: "Posters",
     items: [
-      { title: "Poster title", image: "" },      // e.g. "assets/graphic/posters/ramen.jpg"
-      { title: "Poster title", image: "" },
+      { title: "Poster title", image: "assets/ramen.png" },      // e.g. "assets/graphic/posters/ramen.jpg"
+      { title: "Poster title", image: "assets/yesterday.png" },
       { title: "Poster title", image: "" }
     ]
   },
@@ -78,7 +78,7 @@ const GRAPHIC_CATEGORIES = [
     id: "fan",
     label: "Fan Projects",
     items: [
-      { title: "Fan project", image: "" },
+      { title: "Fan project", image: "assets/tenyears.png" },
       { title: "Fan project", image: "" },
       { title: "Fan project", image: "" }
     ]
