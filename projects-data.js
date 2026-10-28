@@ -69,9 +69,12 @@ const GRAPHIC_CATEGORIES = [
     id: "academic",
     label: "Academic Projects",
     items: [
-      { title: "Academic project", image: "" },
-      { title: "Academic project", image: "" },
-      { title: "Academic project", image: "" }
+      { title: "Academic project", image: "assets/quiz-bee.png" },
+      { title: "Academic project", image: "assets/soc-days.png" },
+      { title: "Academic project", image: "assets/creatives-team.png" }
+      { title: "Academic project", image: "assets/singing-compe.png" }
+      { title: "Academic project", image: "assets/uni-girls.png" }
+      { title: "Academic project", image: "assets/uni-boys.png" }
     ]
   },
   {
@@ -79,8 +82,8 @@ const GRAPHIC_CATEGORIES = [
     label: "Fan Projects",
     items: [
       { title: "Fan project", image: "assets/tenyears.png" },
-      { title: "Fan project", image: "" },
-      { title: "Fan project", image: "" }
+      { title: "Fan project", image: "assets/stayc.png" },
+      { title: "Fan project", image: "assets.sunric.png" }
     ]
   }
 ];
