@@ -47,16 +47,7 @@ const UIUX_PROJECTS = [
    Add as many items as you want, the carousel scrolls.
    To add a category, copy a whole { id, label, items } block. */
 const GRAPHIC_CATEGORIES = [
-  {
-    id: "posters",
-    label: "Posters",
-    items: [
-      { title: "Poster title", image: "assets/ramen.png" },      
-      { title: "Poster title", image: "assets/yesterday.png" },
-      { title: "Poster title", image: "" }
-    ]
-  },
-  {
+    {
     id: "branding",
     label: "Branding & Identity",
     items: [
@@ -65,7 +56,7 @@ const GRAPHIC_CATEGORIES = [
       { title: "Branding title", image: "" }
     ]
   },
-  {
+    {
     id: "academic",
     label: "Academic Projects",
     items: [
@@ -84,6 +75,15 @@ const GRAPHIC_CATEGORIES = [
       { title: "Fan project", image: "assets/tenyears.png" },
       { title: "Fan project", image: "assets/stayc.png" },
       { title: "Fan project", image: "assets/sunric.png" }
+    ]
+  },
+    {
+    id: "posters",
+    label: "Posters",
+    items: [
+      { title: "Poster title", image: "assets/ramen.png" },      
+      { title: "Poster title", image: "assets/yesterday.png" },
+      { title: "Poster title", image: "" }
     ]
   }
 ];
