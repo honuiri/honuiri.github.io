@@ -64,9 +64,7 @@ const GRAPHIC_CATEGORIES = [
     id: "branding",
     label: "Branding & Identity",
     items: [
-      { title: "Branding title", image: "" },
-      { title: "Branding title", image: "" },
-      { title: "Branding title", image: "" }
+      { title: "Branding title", image: "assets/aikocha.png" }
     ]
   },
   {
@@ -89,7 +87,8 @@ const GRAPHIC_CATEGORIES = [
       { title: "Fan project", image: "assets/stayc.png" },
       { title: "Fan project", image: "assets/sunric.png" },
       { title: "Fan project", image: "assets/taerae.png" },
-      { title: "Fan project", image: "assets/beatbox.png" }
+      { title: "Fan project", image: "assets/beatbox.png" },
+      { title: "Fan project", image: "assets/SUNWOO.png" }
     ]
   },
   {
@@ -97,8 +96,7 @@ const GRAPHIC_CATEGORIES = [
     label: "Posters",
     items: [
       { title: "Poster title", image: "assets/ramen.png" },
-      { title: "Poster title", image: "assets/yesterday.png" },
-      { title: "Poster title", image: "" }
+      { title: "Poster title", image: "assets/yesterday.png" }
     ]
   }
 ];
