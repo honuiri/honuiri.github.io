@@ -207,7 +207,8 @@ section { scroll-margin-top: 6rem; }
 .resume-link {
   display: inline-block;
   margin-top: 4.5rem;
-  margin-left: 15%;
+  margin-left: 0;
+  padding-left: 0.35em; /* same inset as the text inside the yellow "Interests" tag */
   font-weight: 700;
   font-size: 2rem;
   line-height: 1.15;
@@ -300,7 +301,7 @@ section { scroll-margin-top: 6rem; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.6rem;
+  gap: 1.25rem;
   text-align: center;
   font-style: italic;
   font-weight: 700;
@@ -387,47 +388,31 @@ section { scroll-margin-top: 6rem; }
   section { scroll-margin-top: 4.5rem; }
   .tag { font-size: 1.6rem; }
 
-  /* ---- Home (phone): photo + About side by side, then Skills, Interests (4 in a row), CV ---- */
-  .home { padding: 2.5rem 7vw 3rem; }
-  .home-grid {
-    grid-template-columns: 42% 1fr;
-    column-gap: 1.6rem;
-    row-gap: 1.75rem;
-    align-items: start;
-  }
-  .about-skills, .side { display: contents; }
-  .profile { grid-column: 1; padding: 0 0 0 0.6rem; }
-  .frame::before { inset: -10px -12px -8px -12px; }
-  .photo { text-align: center; font-size: 0.75rem; }
-  .about-skills .block:first-child { grid-column: 2; padding-top: 0.25rem; }
-  .about-skills .block:last-child,
-  .side .block,
-  .side .resume-link { grid-column: 1 / -1; }
+  /* ---- Home (phone): no photo. About, Skills, Interests (4 in a row), CV ---- */
+  .profile { display: none; }
+  .home { padding: 2.75rem 7vw 3rem; }
+  .home-grid { grid-template-columns: 1fr; gap: 2.25rem; }
+  .about-skills { gap: 2.25rem; padding-top: 0; }
+  .side { grid-template-columns: 1fr; gap: 2rem; padding-top: 0; }
 
-  .frame { max-width: none; margin: 0 0 1rem; }
-  .name { font-size: 0.95rem; }
-  .facts { max-width: none; margin: 1.1rem 0 0; padding-left: 0; gap: 0.45rem; font-size: 0.75rem; }
-  .facts svg { width: 1.1rem; height: 1.1rem; }
-  .facts li { gap: 0.4rem; }
+  .home .tag { font-size: 1.1rem; margin-bottom: 0.7rem; }
+  .about-text { padding: 0; font-size: 0.95rem; line-height: 1.45; }
 
-  .home .tag { font-size: 1.05rem; margin-bottom: 0.6rem; }
-  .about-text { padding: 0; font-size: 0.75rem; line-height: 1.65; }
-
-  .skills { padding: 0 0.25rem; grid-template-columns: 1fr 1fr; gap: 0 1rem; font-size: 0.72rem; }
-  .skills li { margin-left: 1rem; line-height: 1.7; }
+  .skills { padding: 0 0.25rem; grid-template-columns: 1fr 1fr; gap: 0 1rem; font-size: 0.92rem; }
+  .skills li { margin-left: 1.1rem; line-height: 1.4; }
 
   .interests { grid-template-columns: repeat(4, 1fr); justify-content: stretch; gap: 0.5rem; padding-left: 0; }
-  .interests li { font-size: 0.68rem; gap: 0.25rem; }
+  .interests li { font-size: 0.78rem; gap: 0.5rem; }
   .interests li:nth-child(2n) { margin-top: 0; }
-  .interests svg { width: 2.2rem; height: 2.2rem; }
+  .interests svg { width: 2.6rem; height: 2.6rem; }
 
-  .resume-link { margin: 0; font-size: 1.1rem; justify-self: start; }
+  .resume-link { margin: 0; padding-left: 0; font-size: 1.05rem; justify-self: start; }
 
   .bar { font-size: 0.7rem; padding: 0.6rem 4%; }
 
   .contact { --dot: 20px; padding: 4rem 6vw; min-height: 75vh; }
   .contact-inner { gap: 2rem; }
-  .get-in-touch { font-size: clamp(2rem, 9.5vw, 2.8rem); gap: 0; }
+  .get-in-touch { font-size: clamp(2rem, 9.5vw, 2.8rem); gap: 0.75rem; }
   .get-in-touch .line { box-shadow: 0 0 0 3px #fff; }
   .socials { padding: 1.1rem 1.1rem; gap: 0.6rem; }
   .socials p { font-size: 0.9rem; line-height: 1.5; word-break: normal; overflow-wrap: anywhere; }
