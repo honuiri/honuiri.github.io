@@ -51,7 +51,7 @@ const GRAPHIC_CATEGORIES = [
     id: "posters",
     label: "Posters",
     items: [
-      { title: "Poster title", image: "assets/ramen.png" },      // e.g. "assets/graphic/posters/ramen.jpg"
+      { title: "Poster title", image: "assets/ramen.png" },      
       { title: "Poster title", image: "assets/yesterday.png" },
       { title: "Poster title", image: "" }
     ]
