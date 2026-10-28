@@ -9,36 +9,44 @@
 /* ---------- UI/UX & DEVELOPMENT (4 per row on desktop) ---------- */
 const UIUX_PROJECTS = [
   {
-    title: "Project Name",
+    title: "D' Noms of Decilio (DND)",
     role: "UI/UX Designer & Developer",
     image: "",                                   // e.g. "assets/uiux/project-1.png"
-    tags: ["Figma", "HTML", "CSS"],              // optional small labels
-    github: "https://github.com/honuiri",        // leave "" to hide the button
-    live: ""                                     // optional, leave "" to hide
+    tags: ["HTML", "CSS", "React"],              // optional small labels
+    github: "https://github.com/honuiri/D-Noms-of-Decilio",        // leave "" to hide the button
+    live: "https://d-noms-of-decilio.onrender.com/"                                    
+  },
+    {
+    title: "AniMedika",
+    role: "UI/UX Designer & Front-end Developer",
+    image: "",
+    tags: ["HTML", "CSS", "JavaScript"],
+    github: "https://github.com/cinemaseven/AniMedika-A-Rice-Leaf-Disease-Detection-System",
+    live: "https://animedika-a-rice-leaf-disease-detection.onrender.com/"
   },
   {
-    title: "Project Name",
-    role: "UI/UX Designer",
+    title: "eLinkgod",
+    role: "UI/UX Designer & Front-end Developer",
     image: "",
     tags: ["Figma", "Prototype"],
-    github: "",
+    github: "https://github.com/cinemaseven/eLingkod",
     live: ""
   },
   {
-    title: "Project Name",
-    role: "Front-end Developer",
+    title: "Bake & Co.",
+    role: "UI/UX Designer & Front-end Developer",
     image: "",
-    tags: ["React", "CSS"],
-    github: "https://github.com/honuiri",
+    tags: ["Flutter", "Dart"],
+    github: "https://github.com/roki-a/bakeandco",
     live: ""
   },
   {
-    title: "Project Name",
-    role: "UI/UX Designer & Developer",
+    title: "Truth in Tales",
+    role: "UI/UX Designer",
     image: "",
-    tags: ["Figma", "JavaScript"],
-    github: "",
-    live: ""
+    tags: ["HTML", "CSS", "JavaScript"],
+    github: "https://github.com/RandelYumul/Truth_in_Tales",
+    live: "https://randelyumul.github.io/Truth_in_Tales/"
   }
 ];
 
