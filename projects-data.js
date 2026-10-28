@@ -99,7 +99,7 @@ const GRAPHIC_CATEGORIES = [
     items: [
       { title: "Poster title", image: "assets/ramen.png" },
       { title: "Poster title", image: "assets/yesterday.png" },
-      { title: "Branding title", image: "" }
+      { title: "Poster title", image: "" }
     ]
   }
 ];
