@@ -64,7 +64,9 @@ const GRAPHIC_CATEGORIES = [
     id: "branding",
     label: "Branding & Identity",
     items: [
-      { title: "Branding title", image: "assets/aikocha.png" }
+      { title: "Branding title", image: "assets/aikocha.png" },
+      { title: "Branding title", image: "" },
+      { title: "Branding title", image: "" }
     ]
   },
   {
@@ -96,7 +98,8 @@ const GRAPHIC_CATEGORIES = [
     label: "Posters",
     items: [
       { title: "Poster title", image: "assets/ramen.png" },
-      { title: "Poster title", image: "assets/yesterday.png" }
+      { title: "Poster title", image: "assets/yesterday.png" },
+      { title: "Branding title", image: "" }
     ]
   }
 ];
