@@ -262,30 +262,45 @@ section { scroll-margin-top: 6rem; }
   align-items: center;
 }
 
-.contact-grid {
+.contact-inner {
   width: 100%;
-  max-width: 1400px;
+  max-width: 700px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: 3rem;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  gap: 2.75rem;
 }
 
-.socials .tag { font-size: 2.6rem; margin-bottom: 2rem; }
-.socials p { font-size: 1.6rem; line-height: 1.9; word-break: break-word; }
+.get-in-touch {
+  margin: 0;
+  text-align: center;
+  font-style: italic;
+  font-weight: 700;
+  font-size: clamp(2.6rem, 5.5vw, 4.5rem);
+  line-height: 1.35;
+  color: var(--brown);
+}
+.get-in-touch .line {
+  display: inline-block;
+  padding: 0 0.2em;
+  box-shadow: 0 0 0 4px #fff;
+}
+.line-blue   { background: #c5dbea; }
+.line-yellow { background: var(--yellow); }
+
+.socials {
+  width: 100%;
+  background: var(--cream);
+  border: 3px solid #bcd6e6;
+  padding: 1.6rem 2rem;
+  display: grid;
+  gap: 0.8rem;
+}
+.socials p { font-size: 1.1rem; line-height: 1.5; word-break: break-word; }
 .socials strong { font-weight: 700; }
 .socials a { color: var(--brown); text-decoration: none; }
 .socials a:hover { color: var(--blue); text-decoration: underline; }
-
-.get-in-touch {
-  color: var(--blue);
-  font-style: italic;
-  font-weight: 700;
-  font-size: clamp(3.5rem, 8.5vw, 8.5rem);
-  line-height: 1.05;
-  text-align: right;
-}
 
 /* ============ TABLET / MOBILE ============ */
 @media (max-width: 1000px) {
@@ -327,11 +342,12 @@ section { scroll-margin-top: 6rem; }
   .dropdown-menu a { font-size: 0.95rem; padding: 0.55rem 0.8rem; }
   .dropdown-toggle::after { margin-left: 0.2rem; }
 
-  .contact { --dot: 20px; padding: 4rem 7vw; min-height: 75vh; }
-  .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-  .get-in-touch { order: -1; text-align: right; font-size: clamp(3rem, 16vw, 4.5rem); }
-  .socials .tag { font-size: 1.8rem; margin-bottom: 1rem; }
-  .socials p { font-size: 1.05rem; line-height: 1.8; }
+  .contact { --dot: 20px; padding: 4rem 6vw; min-height: 75vh; }
+  .contact-inner { gap: 2rem; }
+  .get-in-touch { font-size: clamp(2rem, 9.5vw, 2.8rem); }
+  .get-in-touch .line { box-shadow: 0 0 0 3px #fff; }
+  .socials { padding: 1.1rem 1.1rem; gap: 0.6rem; }
+  .socials p { font-size: 0.9rem; line-height: 1.5; word-break: normal; overflow-wrap: anywhere; }
 }
 
 @media (max-width: 400px) {
