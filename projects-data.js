@@ -8,9 +8,10 @@
    The picture on each card is AUTOMATIC. You do not need images.
      1. If you set image: "assets/..." that picture is used.
      2. Otherwise, a screenshot of your live site is shown.
-     3. If there is no live site, the GitHub repo's preview card is shown.
+     3. If there is no picture, the card shows a designed cover with the project name.
    Clicking the picture opens the live site (or GitHub if there is no live link).
-   Leave github or live as "" to hide that button. */
+   Leave github or live as "" to hide that button.
+   Optional: add description: "one or two sentences" to any project to show text on its card. */
 const UIUX_PROJECTS = [
   {
     title: "D' Noms of Decilio (DND)",

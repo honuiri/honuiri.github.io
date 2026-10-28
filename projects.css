@@ -105,25 +105,34 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 3.5rem 2.25rem;
+  gap: 2.25rem 1.75rem;
+  align-items: stretch;
 }
 
-.card { display: flex; flex-direction: column; gap: 1.1rem; }
+/* the card */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  background: #fff;
+  border: 2px solid var(--blue);
+  padding: 0.85rem 0.85rem 1.1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover { transform: translate(-4px, -4px); box-shadow: 7px 7px 0 var(--yellow); }
 
+/* picture area (smaller than before, so the text gets room) */
 .card-img {
-  aspect-ratio: 4 / 5;
-  background: #d9d9d9;
-  border: 2px solid transparent;
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-style: italic;
-  color: #000;
-  overflow: hidden;
-  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  background: #d9d9d9;
+  color: inherit;
+  text-decoration: none;
 }
-a.card-img { color: inherit; text-decoration: none; }
-.card-img { position: relative; }
 .card-img img {
   position: absolute; inset: 0;
   width: 100%; height: 100%;
@@ -133,22 +142,65 @@ a.card-img { color: inherit; text-decoration: none; }
   transition: opacity 0.4s;
 }
 .card-img img.loaded { opacity: 1; }
-.card-img.fallback { background: var(--cream); border-color: var(--blue); }
-.card-img.fallback img { object-fit: contain; object-position: center; }
-.card:hover .card-img {
-  transform: translate(-5px, -5px);
-  box-shadow: 8px 8px 0 var(--yellow);
-  border-color: var(--blue);
+
+/* designed cover shown when there is no picture (or while it loads) */
+.cover {
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1rem;
+  text-align: center;
+}
+.cover-title {
+  background: var(--cream);
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.2;
+  padding: 0.15em 0.5em;
+}
+.cover-sub {
+  background: var(--yellow);
+  color: var(--brown);
+  font-size: 0.8rem;
+  padding: 0.05em 0.6em;
+}
+.cover-0 {
+  background-color: var(--yellow);
+  background-image: radial-gradient(circle, rgba(251, 252, 238, 0.75) 13px, transparent 14px);
+  background-size: 54px 54px;
+}
+.cover-0 .cover-sub { background: var(--green); }
+.cover-1 {
+  background-color: #e9efd2;
+  background-image:
+    repeating-linear-gradient(0deg,  rgba(57, 113, 184, 0.35) 0 12px, transparent 12px 24px),
+    repeating-linear-gradient(90deg, rgba(57, 113, 184, 0.35) 0 12px, transparent 12px 24px);
+}
+.cover-2 {
+  background-color: var(--blue);
+  background-image: radial-gradient(circle, rgba(246, 230, 165, 0.3) 13px, transparent 14px);
+  background-size: 54px 54px;
 }
 
-.card-body { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; text-align: center; }
+/* text */
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.55rem;
+  padding: 0 0.25rem;
+  text-align: left;
+}
 .card h3 { color: var(--blue); font-size: 1.3rem; font-weight: 700; line-height: 1.2; }
 .role { font-size: 0.95rem; }
+.desc { font-size: 0.9rem; line-height: 1.55; }
 
-.chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.35rem; }
-.chips li { background: var(--yellow); font-size: 0.78rem; padding: 0.05rem 0.55rem; border-radius: 999px; }
+.chips { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.chips li { background: var(--yellow); font-size: 0.78rem; padding: 0.05rem 0.6rem; border-radius: 999px; }
 
-.links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin-top: 0.25rem; }
+/* buttons stay at the bottom so every card lines up */
+.links { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto; padding-top: 0.6rem; }
 .btn {
   color: var(--blue);
   text-decoration: none;
@@ -274,11 +326,8 @@ a.card-img { color: inherit; text-decoration: none; }
   .pills::-webkit-scrollbar { display: none; }
 
   .uiux { padding: 3rem 7vw 5rem; }
-  .card-grid { grid-template-columns: 1fr 1fr; gap: 2.25rem 1rem; }
-  .card h3 { font-size: 1.05rem; }
-  .role { font-size: 0.8rem; }
-  .chips li { font-size: 0.7rem; }
-  .btn { font-size: 0.8rem; padding: 0.1rem 0.75rem; }
+  .card-grid { grid-template-columns: 1fr; gap: 1.75rem; }
+  .cover-title { font-size: 1.15rem; }
 
   .gcat { padding: 3rem 0 3.5rem; }
   .cat-title { margin-bottom: 2rem; padding: 0 7vw; }
@@ -291,8 +340,4 @@ a.card-img { color: inherit; text-decoration: none; }
   .arrow svg { width: 1.2rem; height: 1.2rem; }
   .arrow.prev { left: 0.5rem; }
   .arrow.next { right: 0.5rem; }
-}
-
-@media (max-width: 380px) {
-  .card-grid { grid-template-columns: 1fr; }
 }

@@ -27,61 +27,46 @@
     wrap.appendChild(a);
   }
 
-  // "https://github.com/user/repo" -> "user/repo"
-  function githubRepo(url) {
-    const m = (url || "").match(/github\.com\/([^\/\s]+\/[^\/\s#?]+)/i);
-    return m ? m[1].replace(/\.git$/, "") : "";
+  // Every card starts with a designed cover (project name on a colored pattern).
+  // If you have your own image, or a live site, a picture fades in on top of it.
+  function buildCover(frame, project, index) {
+    frame.classList.add("cover", "cover-" + (index % 3));
+    frame.appendChild(el("span", "cover-title", project.title));
+    if (project.tags && project.tags.length) {
+      frame.appendChild(el("span", "cover-sub", project.tags.join(" · ")));
+    }
   }
 
-  // Preview picture, tried in this order until one loads:
-  //   1. your own image (if you set one)
-  //   2. an automatic screenshot of the live site
-  //   3. the GitHub repo's preview card
-  //   4. the gray placeholder
-  function previewSources(p) {
+  // Pictures tried in order: your own image, then a screenshot of the live site.
+  function previewSources(project) {
     const list = [];
-    if (p.image) list.push({ src: p.image, card: false });
-    if (p.live) {
-      list.push({
-        src: "https://api.microlink.io/?url=" + encodeURIComponent(p.live) +
-          "&screenshot=true&meta=false&embed=screenshot.url" +
-          "&viewport.width=900&viewport.height=1125&waitForTimeout=2500",
-        card: false
-      });
+    if (project.image) list.push(project.image);
+    if (project.live) {
+      list.push(
+        "https://api.microlink.io/?url=" + encodeURIComponent(project.live) +
+        "&screenshot=true&meta=false&embed=screenshot.url" +
+        "&viewport.width=1200&viewport.height=900&waitForTimeout=2500"
+      );
     }
-    const repo = githubRepo(p.github);
-    if (repo) list.push({ src: "https://opengraph.githubassets.com/1/" + repo, card: true });
     return list;
   }
 
   function loadPreview(frame, sources, alt) {
-    if (!sources.length) return;
-    frame.firstChild.textContent = "loading preview…";
     let i = 0;
     (function tryNext() {
-      if (i >= sources.length) {
-        frame.firstChild.textContent = "project image";
-        return;
-      }
-      const source = sources[i++];
+      if (i >= sources.length) return;          // nothing loaded: the cover stays
       const img = document.createElement("img");
       img.alt = alt;
       img.loading = "lazy";
-      img.addEventListener("load", function () {
-        frame.classList.toggle("fallback", source.card);
-        img.classList.add("loaded");
-      });
-      img.addEventListener("error", function () {
-        img.remove();
-        tryNext();
-      });
-      img.src = source.src;
+      img.addEventListener("load", function () { img.classList.add("loaded"); });
+      img.addEventListener("error", function () { img.remove(); tryNext(); });
+      img.src = sources[i++];
       frame.appendChild(img);
     })();
   }
 
   if (grid && typeof UIUX_PROJECTS !== "undefined") {
-    UIUX_PROJECTS.forEach(function (p) {
+    UIUX_PROJECTS.forEach(function (p, index) {
       const card = el("article", "card");
 
       // the picture links to the live site (or GitHub if there is no live site)
@@ -93,13 +78,14 @@
         frame.rel = "noopener";
         frame.setAttribute("aria-label", "Open " + p.title);
       }
-      frame.appendChild(el("span", null, "project image"));
+      buildCover(frame, p, index);
       card.appendChild(frame);
       loadPreview(frame, previewSources(p), p.title);
 
       const body = el("div", "card-body");
       body.appendChild(el("h3", null, p.title));
       if (p.role) body.appendChild(el("p", "role", p.role));
+      if (p.description) body.appendChild(el("p", "desc", p.description));
 
       if (p.tags && p.tags.length) {
         const chips = el("ul", "chips");
