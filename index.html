@@ -19,7 +19,7 @@
   <!-- ============ HEADER ============ -->
   <header class="site-header">
     <a href="index.html#home" class="logo" aria-label="yons - back to top">yons (ˆ. .ˆ)ʃ</a>
-    <nav class="nav" aria-label="Main navigation">
+    <nav class="nav" id="site-nav" aria-label="Main navigation">
       <a href="index.html#home" class="nav-link active" data-section="home">Home</a>
       <div class="dropdown">
         <button class="nav-link dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">Projects</button>
@@ -30,6 +30,9 @@
       </div>
       <a href="index.html#contact" class="nav-link" data-section="contact">Contact</a>
     </nav>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
   </header>
 
   <main>
@@ -114,8 +117,8 @@
             </ul>
           </div>
 
-          <!-- Put your resume PDF in the project folder as resume.pdf -->
-          <a href="resume.pdf" class="resume-link" target="_blank" rel="noopener">View my Resume here!</a>
+          <!-- CV file: assets/cv.pdf -->
+          <a href="assets/cv.pdf" class="resume-link" target="_blank" rel="noopener">View my CV here!</a>
         </div>
 
       </div>

@@ -48,3 +48,25 @@ if (sectionLinks.length && sections.length) {
 
   sections.forEach((section) => observer.observe(section));
 }
+
+// ---------- Hamburger menu (phones) ----------
+const header = document.querySelector(".site-header");
+const menuToggle = document.querySelector(".menu-toggle");
+
+if (header && menuToggle) {
+  const setMenu = (open) => {
+    header.classList.toggle("menu-open", open);
+    menuToggle.setAttribute("aria-expanded", String(open));
+    menuToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  };
+
+  menuToggle.addEventListener("click", () => {
+    setMenu(!header.classList.contains("menu-open"));
+  });
+
+  // close after choosing a page, on Escape, on outside tap, or when the screen gets wide
+  header.querySelectorAll(".nav a").forEach((a) => a.addEventListener("click", () => setMenu(false)));
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") setMenu(false); });
+  document.addEventListener("click", (e) => { if (!header.contains(e.target)) setMenu(false); });
+  window.addEventListener("resize", () => { if (window.innerWidth > 700) setMenu(false); });
+}
