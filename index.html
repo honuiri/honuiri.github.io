@@ -18,11 +18,17 @@
 
   <!-- ============ HEADER ============ -->
   <header class="site-header">
-    <a href="#home" class="logo" aria-label="yons - back to top">yons (ˆ. .ˆ)ʃ</a>
+    <a href="index.html#home" class="logo" aria-label="yons - back to top">yons (ˆ. .ˆ)ʃ</a>
     <nav class="nav" aria-label="Main navigation">
-      <a href="#home" class="nav-link active">Home</a>
-      <a href="#projects" class="nav-link">Projects</a>
-      <a href="#contact" class="nav-link">Contact</a>
+      <a href="index.html#home" class="nav-link active" data-section="home">Home</a>
+      <div class="dropdown">
+        <button class="nav-link dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">Projects</button>
+        <ul class="dropdown-menu">
+          <li><a href="projects-uiux.html">UI/UX &amp; Development</a></li>
+          <li><a href="projects-graphic.html">Graphic Design</a></li>
+        </ul>
+      </div>
+      <a href="index.html#contact" class="nav-link" data-section="contact">Contact</a>
     </nav>
   </header>
 
@@ -112,30 +118,6 @@
           <a href="resume.pdf" class="resume-link" target="_blank" rel="noopener">View my Resume here!</a>
         </div>
 
-      </div>
-    </section>
-
-    <div class="bar"><span>PORTFOLIO</span><span>CREATIVES</span><span>YOHANNA DECILIO</span></div>
-
-    <!-- ============ PROJECTS (placeholder, replace when ready) ============ -->
-    <section id="projects" class="projects">
-      <h2 class="tag">Projects</h2>
-      <div class="project-grid">
-        <article class="project-card">
-          <div class="project-img">project image</div>
-          <h3>Project Title</h3>
-          <p>Short description of your project goes here.</p>
-        </article>
-        <article class="project-card">
-          <div class="project-img">project image</div>
-          <h3>Project Title</h3>
-          <p>Short description of your project goes here.</p>
-        </article>
-        <article class="project-card">
-          <div class="project-img">project image</div>
-          <h3>Project Title</h3>
-          <p>Short description of your project goes here.</p>
-        </article>
       </div>
     </section>
 

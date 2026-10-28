@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UI/UX &amp; Development | Yohanna Decilio</title>
+  <meta name="description" content="UI/UX design and development projects by Yohanna Decilio.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Iosevka+Charon:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <a href="index.html#home" class="logo" aria-label="yons - back to home">yons (ˆ. .ˆ)ʃ</a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html#home" class="nav-link">Home</a>
+      <div class="dropdown">
+        <button class="nav-link dropdown-toggle active" type="button" aria-haspopup="true" aria-expanded="false">Projects</button>
+        <ul class="dropdown-menu">
+          <li><a href="projects-uiux.html" aria-current="page">UI/UX &amp; Development</a></li>
+          <li><a href="projects-graphic.html">Graphic Design</a></li>
+        </ul>
+      </div>
+      <a href="index.html#contact" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero-grid">
+        <h1 class="page-title">
+          <span class="tag">PROJECTS</span>
+          <span class="subtitle">UI/UX &amp; Development</span>
+        </h1>
+        <p class="hero-text">
+          This section showcases my work in UI/UX design and development, where creativity and functionality come together. From designing intuitive user interfaces in Figma to developing responsive websites using HTML and CSS, these projects reflect my passion for creating meaningful digital experiences and continuously improving my technical skills.
+        </p>
+      </div>
+      <a href="#content" class="scroll-cue">scroll to see more<span class="triangle"></span></a>
+    </section>
+
+    <div class="bar bar--yellow"><span>PORTFOLIO</span><span>CREATIVES</span><span>YOHANNA DECILIO</span></div>
+
+    <!-- ============ PROJECT CARDS (built from projects-data.js) ============ -->
+    <section id="content" class="uiux" aria-label="UI/UX and development projects">
+      <div class="card-grid" id="uiux-grid"></div>
+    </section>
+  </main>
+
+  <script src="projects-data.js"></script>
+  <script src="script.js"></script>
+  <script src="projects.js"></script>
+</body>
+</html>

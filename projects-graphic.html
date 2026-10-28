@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Graphic Design | Yohanna Decilio</title>
+  <meta name="description" content="Graphic design projects by Yohanna Decilio: posters, branding, academic and fan projects.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Iosevka+Charon:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <a href="index.html#home" class="logo" aria-label="yons - back to home">yons (ˆ. .ˆ)ʃ</a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html#home" class="nav-link">Home</a>
+      <div class="dropdown">
+        <button class="nav-link dropdown-toggle active" type="button" aria-haspopup="true" aria-expanded="false">Projects</button>
+        <ul class="dropdown-menu">
+          <li><a href="projects-uiux.html">UI/UX &amp; Development</a></li>
+          <li><a href="projects-graphic.html" aria-current="page">Graphic Design</a></li>
+        </ul>
+      </div>
+      <a href="index.html#contact" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero-grid">
+        <h1 class="page-title">
+          <span class="tag">PROJECTS</span>
+          <span class="subtitle">Graphic Design</span>
+        </h1>
+        <p class="hero-text">
+          This section features my graphic design projects, highlighting my creativity and visual communication skills. Using tools such as Adobe Photoshop and Canva, I create designs ranging from posters and promotional materials to digital content and creative fan projects.
+        </p>
+      </div>
+
+      <!-- category pills are built from projects-data.js -->
+      <nav class="pills" id="cat-pills" aria-label="Categories"></nav>
+
+      <a href="#posters" class="scroll-cue">scroll to see more<span class="triangle"></span></a>
+    </section>
+
+    <div class="bar bar--yellow"><span>PORTFOLIO</span><span>CREATIVES</span><span>YOHANNA DECILIO</span></div>
+
+    <!-- ============ CATEGORIES (built from projects-data.js) ============ -->
+    <div id="graphic-root"></div>
+  </main>
+
+  <script src="projects-data.js"></script>
+  <script src="script.js"></script>
+  <script src="projects.js"></script>
+</body>
+</html>
