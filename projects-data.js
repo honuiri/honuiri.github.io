@@ -65,7 +65,7 @@ const GRAPHIC_CATEGORIES = [
     label: "Branding & Identity",
     items: [
       { title: "Branding title", image: "assets/aikocha.png" },
-      { title: "Branding title", image: "" },
+      { title: "Branding title", image: "assets/roscents.png" },
       { title: "Branding title", image: "" }
     ]
   },
