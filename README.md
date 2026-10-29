@@ -1,136 +1,88 @@
-# Yohanna Decilio | Portfolio
+# yons (ˆ. .ˆ)ʃ | Yohanna Decilio's Portfolio
 
-The site has a Home page, two Projects pages (UI/UX & Development and Graphic Design) and a Contact section.
-It is built with plain HTML, CSS and JavaScript, with no build step and no frameworks.
+**Live site: https://honuiri.github.io**
 
-Live site: https://honuiri.github.io
+Hi, and welcome! This is the home of Yona's work: a small, handmade website where her projects, skills and creative side live in one place.
 
-## Pages
+She is an aspiring graphic designer and UI/UX developer based in San Fernando City, Pampanga, Philippines. She leans toward the creative side of things, but she is always willing to challenge herself and grow her skills in programming and development.
 
-| Page | File | Contents |
+## What this portfolio is about
+
+This portfolio is not meant to be a wall of polished perfection. It is meant to show how Yohanna thinks and what she is learning, across two sides that she loves equally:
+
+- **Design:** posters, branding and identity, academic and school-event work, and fan projects made purely for the joy of creating.
+- **Development:** websites and apps where she designed the interface and then built it, from Figma wireframes to working code.
+
+## What visitors should know
+
+- **She designs and builds.** Many of the UI/UX projects were designed by Yohanna and also developed by her, so the work covers both how something looks and how it works.
+- **She is still growing.** The title says *aspiring* on purpose. Each project is a step in learning, and newer work will keep being added.
+- **Fan projects count.** Some of the graphic design work was made for fun and for the fandoms she loves. It is part of her creative practice, and it is where a lot of experimenting happens.
+- **She works well with others.** Team collaboration is one of her listed skills, and several projects were built together with classmates and teammates.
+- **Everything is clickable.** Project cards link to the live websites and the code on GitHub, and posters open in a large view.
+
+## What is inside
+
+### Home
+A short introduction, her skills and her interests: traditional sketch, prototyping, graphic design and photography. A link there opens her CV.
+
+### Projects
+The **Projects** menu leads to two pages:
+
+**UI/UX & Development** features:
+
+| Project | Role | Built with |
 | --- | --- | --- |
-| Home + Contact | `index.html` | About, skills, interests, resume link, socials |
-| UI/UX & Development | `projects-uiux.html` | Project cards (4 per row on desktop) |
-| Graphic Design | `projects-graphic.html` | Category tabs and a carousel per category |
+| [D' Noms of Decilio (DND)](https://d-noms-of-decilio.onrender.com/) | UI/UX Designer & Developer | HTML, CSS, React |
+| [AniMedika](https://animedika-a-rice-leaf-disease-detection.onrender.com/) | UI/UX Designer & Front-end Developer | HTML, CSS, JavaScript |
+| [eLinkgod](https://github.com/cinemaseven/eLingkod) | UI/UX Designer & Front-end Developer | Figma, Prototype |
+| [Bake & Co.](https://github.com/roki-a/bakeandco) | UI/UX Designer & Front-end Developer | Flutter, Dart |
+| [Truth in Tales](https://randelyumul.github.io/Truth_in_Tales/) | UI/UX Designer | HTML, CSS, JavaScript |
 
-The **Projects** item in the navigation is a dropdown that links to the two project pages.
+**Graphic Design** is organized into four collections:
+- **Posters**
+- **Branding & Identity**
+- **Academic Projects**
+- **Fan Projects**
 
-## Files
+Each collection is a swipeable carousel, and any poster can be opened in a larger view.
+
+### Contact
+Email, phone, LinkedIn and Facebook, all in one place. Anyone who likes what they see, wants to collaborate or has an opportunity is welcome to reach out.
+
+## Skills at a glance
+
+UI/UX Design, Graphic Design, Wireframing & Prototyping, Figma, Adobe Photoshop, Canva, HTML, CSS, JavaScript, Python, Java, Creativity and Team Collaboration.
+
+## The look and feel
+
+The site was designed to feel warm, a little playful and handmade, like a well-loved notebook, while staying easy to read.
+
+- **Colors:** soft yellow `#F6E6A5`, blue `#3971B8`, sage green `#C8D69B`, cream `#FBFCEE` and a warm brown `#43302E`.
+- **Fonts:** *Annie Use Your Telescope* for the handwritten `yons (ˆ. .ˆ)ʃ` logo and *Iosevka Charon* for everything else.
+- **Details:** highlighter-style headings, a gingham photo frame and a polka-dot contact page.
+- **Every screen size:** the site was designed for both desktop and phone, with a hamburger menu on mobile.
+
+## Behind the scenes
+
+The website is coded with plain **HTML, CSS and JavaScript**: no frameworks, no build tools. It is hosted for free on **GitHub Pages**, so the repository is the website. Every change that is committed here goes live within a minute or two.
 
 ```
-index.html              Home + Contact page
-projects-uiux.html      UI/UX & Development page
-projects-graphic.html   Graphic Design page
-projects-data.js        Project content: the one file to edit to add, remove or reorder projects
-style.css               Shared styles (colors, fonts, header, dropdown, home, contact)
-projects.css            Styles for the two project pages
-script.js               Navigation dropdown and nav highlight while scrolling
-projects.js             Builds the cards and carousels from projects-data.js
-assets/                 All images/pdf
+index.html              Home + Contact
+projects-uiux.html      UI/UX & Development projects
+projects-graphic.html   Graphic Design projects
+projects-data.js        All project content, kept in one place
+style.css               Shared styles
+projects.css            Project page styles
+script.js               Menu and navigation
+projects.js             Builds the cards and carousels
+assets/                 Images, favicon and CV
 ```
 
-## Adding and editing projects
+Adding a new project only takes one edit in `projects-data.js`, so the portfolio can keep growing alongside Yohanna.
 
-Everything on the two project pages comes from **`projects-data.js`**.
-The HTML files do not need to be edited for projects.
+## Say hello
 
-### UI/UX & Development
+Thanks for stopping by and for looking through the work. If something caught your eye, or there is a project to work on together, Yohanna would love to hear from you. Contact details are in the Contact section of the site.
 
-A project is added by copying one `{ ... },` block inside `UIUX_PROJECTS`, pasting it after the last one and editing the values:
-
-```js
-{
-  title: "Project Name",
-  role: "UI/UX Designer & Front-end Developer",
-  image: "",                                  // optional, a custom picture
-  tags: ["HTML", "CSS", "JavaScript"],        // optional small labels
-  description: "One or two sentences.",       // optional text on the card
-  github: "https://github.com/user/repo",     // "" hides the button
-  live: "https://example.com/"                // "" hides the button
-},
-```
-
-**The card picture is automatic**, chosen in this order:
-
-1. The project's own `image` (for example `"assets/uiux/project.png"`), if one is set.
-2. A screenshot of the `live` site (made by the free Microlink service).
-3. A designed cover showing the project name and tags, if there is no picture.
-
-Clicking the picture opens the live site, or GitHub when there is no live link.
-Cards flow 4 per row on desktop, 2 on tablets and 1 on phones, and extra projects simply add more rows.
-
-Notes:
-- Render's free plan puts sites to sleep, so a screenshot of a sleeping site can show a loading page.
-  Opening the live site once wakes it. Setting `image` gives full control over the picture.
-- If the screenshot is slow or fails, the designed cover stays in place, so a card is never blank.
-
-### Graphic Design
-
-Each category in `GRAPHIC_CATEGORIES` has a list of `items`. Items can be added without limit, and the carousel scrolls:
-
-```js
-{ title: "Poster title", image: "assets/my-poster.png" },
-```
-
-- Clicking a poster on the site opens it large.
-- `image: ""` shows a gray placeholder.
-- **Adding a category:** copy a whole `{ id, label, items: [ ... ] }` block and give it a new `id` and `label`.
-  The tab, the section and the yellow bars are created automatically.
-- **Reordering categories:** move the blocks around inside `GRAPHIC_CATEGORIES`. The page follows that order.
-  Every block needs a comma after it except the last one.
-
-## Images
-
-Images live in the `assets/` folder and are referenced as `assets/file-name.png`.
-
-- File names are **case-sensitive** on GitHub: `Ramen.PNG` is not the same as `ramen.png`.
-- Lowercase names with dashes and no spaces work best (`quiz-bee.png`).
-- Smaller files load faster, so posters under about 1 MB are ideal.
-- Profile photo: in `index.html`, replace `<span>sample pic here</span>` with
-  `<img src="assets/profile.jpg" alt="Yohanna Decilio">`.
-
-## Other edits
-
-| What | Where |
-| --- | --- |
-| Contact details | Socials block at the bottom of `index.html` |
-| About, skills, interests | `index.html` |
-| Resume | A file named `resume.pdf` next to `index.html` |
-| Colors and fonts | The `:root` block at the top of `style.css` |
-| Interest icon spacing | `.interests` in `style.css` |
-
-Fonts: **Annie Use Your Telescope** (logo) and **Iosevka Charon** (everything else), loaded from Google Fonts.
-If a font does not appear, the site falls back to a plain monospace font.
-
-Style guide colors: `#F6E6A5` yellow, `#3971B8` blue, `#C8D69B` green, `#FBFCEE` cream, `#43302E` brown.
-
-## Deploying on GitHub Pages
-
-1. The repository must be **public** and named `USERNAME.github.io`.
-2. All files sit at the **top level** of the `main` branch (not inside a folder), with images inside `assets/`.
-3. **Settings → Pages → Build and deployment:** Source = *Deploy from a branch*, Branch = `main`, folder = `/ (root)`.
-4. After about 1 to 2 minutes the site is live at `https://USERNAME.github.io`.
-
-### Updating the site
-
-1. In the repository, choose **Add file → Upload files**.
-2. Drag in the changed files and any new images. Files with the same name replace the old ones.
-3. Click **Commit changes** and wait about a minute.
-4. Hard refresh the site with **Ctrl+Shift+R** (a private tab works on phones) to skip cached versions.
-
-Each deploy can be followed under the repository's **Actions** tab. A green check means the update is live.
-
-## Troubleshooting
-
-| Problem | Likely fix |
-| --- | --- |
-| Changes do not show | Confirm that **Commit changes** was clicked, then hard refresh (Ctrl+Shift+R) |
-| Project pages are empty | `projects-data.js` is missing from the top level of the repository, or contains a typo (a missing comma or bracket). Press F12, open **Console**, and read the red message |
-| A poster shows a gray box | The path in `projects-data.js` does not match the file in `assets/` exactly (check capital letters and the extension) |
-| 404 on a project page | That HTML file was not uploaded to the top level of the repository |
-| A UI/UX card shows the cover instead of a screenshot | The project has no `live` link, or the site was asleep or slow. Setting `image` gives a fixed picture |
-| Fonts look different | Google Fonts did not load. Check the connection and refresh |
-
-## Credits
-
-Designed and built by Yohanna Decilio.
+*Designed and built by Yohanna Decilio.*
