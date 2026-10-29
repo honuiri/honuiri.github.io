@@ -312,7 +312,7 @@ section { scroll-margin-top: 6rem; }
 .get-in-touch .line {
   display: inline-block;
   padding: 0 0.2em;
-  box-shadow: 0 0 0 4px #fff;
+  box-shadow: 0 0 0 4px var(--cream);
 }
 .line-blue   { background: #c5dbea; }
 .line-yellow { background: var(--yellow); }
@@ -413,7 +413,7 @@ section { scroll-margin-top: 6rem; }
   .contact { --dot: 20px; padding: 4rem 6vw; min-height: 75vh; }
   .contact-inner { gap: 2rem; }
   .get-in-touch { font-size: clamp(2rem, 9.5vw, 2.8rem); gap: 0.75rem; }
-  .get-in-touch .line { box-shadow: 0 0 0 3px #fff; }
+  .get-in-touch .line { box-shadow: 0 0 0 3px var(--cream); }
   .socials { padding: 1.1rem 1.1rem; gap: 0.6rem; }
   .socials p { font-size: 0.9rem; line-height: 1.5; word-break: normal; overflow-wrap: anywhere; }
 }
