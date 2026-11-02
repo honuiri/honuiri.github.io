@@ -50,7 +50,7 @@
   padding: 0 0.05em;
   background: none;
   color: #c5dbea;
-  -webkit-text-stroke: 2px var(--blue);
+  -webkit-text-stroke: 3px #3c3c3c;
   paint-order: stroke fill;
   font-size: clamp(2.8rem, 6vw, 5.4rem);
   font-weight: 700;
@@ -362,7 +362,7 @@
   .hero::before { right: 0; }
   .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
   .page-title { margin-left: 0; }
-  .page-title .tag { -webkit-text-stroke-width: 1.5px; }
+  .page-title .tag { -webkit-text-stroke-width: 2px; }
   .hero-text { padding: 0; font-size: 0.95rem; line-height: 1.65; }
 
   .pills { justify-content: flex-start; gap: 0.4rem; overflow-x: auto; scrollbar-width: none; margin-bottom: 1.5rem; padding: 0 0 0.25rem; }
