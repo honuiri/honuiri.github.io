@@ -230,4 +230,6 @@
       });
     }
   }
+
+  if (window.revealInit) window.revealInit();
 })();

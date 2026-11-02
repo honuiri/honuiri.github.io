@@ -70,3 +70,42 @@ if (header && menuToggle) {
   document.addEventListener("click", (e) => { if (!header.contains(e.target)) setMenu(false); });
   window.addEventListener("resize", () => { if (window.innerWidth > 700) setMenu(false); });
 }
+
+// ---------- Scroll reveal (cute pop-in as things scroll into view) ----------
+(function () {
+  if (!("IntersectionObserver" in window)) return;
+
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in");
+          io.unobserve(entry.target);
+        }
+      });
+    },
+    { rootMargin: "0px 0px -8% 0px", threshold: 0.08 }
+  );
+
+  // projects.js calls this again after it builds the cards and carousels
+  window.revealInit = function () {
+    const groups = [".home .block", ".facts", ".resume-link", ".cat-title", ".gcat .carousel", ".card", ".get-in-touch", ".socials"];
+    groups.forEach((selector) => {
+      document.querySelectorAll(selector).forEach((el, i) => {
+        if (el.dataset.rv) return;
+        el.dataset.rv = "1";
+        el.classList.add("reveal");
+        el.style.setProperty("--d", (i % 4) * 0.08 + "s");
+        io.observe(el);
+      });
+    });
+    document.querySelectorAll(".home .tag").forEach((tag) => {
+      if (tag.dataset.rv) return;
+      tag.dataset.rv = "1";
+      tag.classList.add("sweep");
+      io.observe(tag);
+    });
+  };
+
+  window.revealInit();
+})();
