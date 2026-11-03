@@ -89,7 +89,7 @@ if (header && menuToggle) {
 
   // projects.js calls this again after it builds the cards and carousels
   window.revealInit = function () {
-    const groups = [".home .block", ".facts", ".resume-link", ".cat-title", ".gcat .carousel", ".card", ".get-in-touch", ".socials"];
+    const groups = [".home .block", ".facts", ".resume-link", ".cat-title", ".gcat .carousel", ".card"];
     groups.forEach((selector) => {
       document.querySelectorAll(selector).forEach((el, i) => {
         if (el.dataset.rv) return;
@@ -98,6 +98,13 @@ if (header && menuToggle) {
         el.style.setProperty("--d", (i % 4) * 0.08 + "s");
         io.observe(el);
       });
+    });
+    // contact heading: starts hidden behind the contact box, slides up when scrolled to
+    document.querySelectorAll(".heading-clip").forEach((el) => {
+      if (el.dataset.rv) return;
+      el.dataset.rv = "1";
+      el.classList.add("peek");
+      io.observe(el);
     });
     document.querySelectorAll(".home .tag").forEach((tag) => {
       if (tag.dataset.rv) return;

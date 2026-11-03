@@ -8,7 +8,7 @@
   }
 
   function makeBar() {
-    const bar = el("div", "bar bar--yellow");
+    const bar = el("div", "bar");
     ["PORTFOLIO", "CREATIVES", "YOHANNA DECILIO"].forEach(function (t) {
       bar.appendChild(el("span", null, t));
     });
