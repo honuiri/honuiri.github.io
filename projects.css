@@ -15,9 +15,10 @@
   width: 100%;
   padding: 0 8.5vw;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto minmax(0, 34rem);
+  justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: clamp(2rem, 5vw, 5rem);
 }
 
 .page-title {
@@ -49,8 +50,8 @@
 
 /* paragraph on a soft cream card */
 .hero-text {
-  justify-self: end;
-  max-width: 36rem;
+  justify-self: start;
+  max-width: 34rem;
   padding: 1.7rem 1.9rem;
   background: var(--cream);
   border-radius: 1.1rem;
